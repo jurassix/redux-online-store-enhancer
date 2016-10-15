@@ -34,5 +34,6 @@ export default function onlineStoreEnhancer() {
     } else {
       console.error('No window object, maintainer needs to add support for React Native, PR welcome');
     }
+    return store;
   }
 }
