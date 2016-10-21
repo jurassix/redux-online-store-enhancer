@@ -30,7 +30,7 @@ export default function onlineStoreEnhancer() {
     const {dispatch, getState} = store;
     if (window) {
       window.addEventListener('online',  updateOnlineStatus(dispatch, getState));
-      window.addEventListener('online', updateOnlineStatus(dispatch, getState));
+      window.addEventListener('offline', updateOnlineStatus(dispatch, getState));
     } else {
       console.error('No window object, maintainer needs to add support for React Native, PR welcome');
     }
