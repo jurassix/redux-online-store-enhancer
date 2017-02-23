@@ -13,7 +13,7 @@ npm i -S redux-online-store-enhancer
 import onlineStoreEnhancer from 'redux-online-store-enhancer';
 
 const middleware = [];
-const store = createStore(reducer, compose(applyMiddleware(...middleware), onlineStoreEnhancer);
+const store = createStore(reducer, compose(applyMiddleware(...middleware), onlineStoreEnhancer));
 
 // get from state directly
 const { online } = store.getState();
