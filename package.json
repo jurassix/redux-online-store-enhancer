@@ -1,6 +1,6 @@
 {
   "name": "redux-online-store-enhancer",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "Automatically detect if you are online or online.",
   "main": "./lib/onlineStoreEnhancer.js",
   "scripts": {
