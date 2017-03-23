@@ -1,19 +1,55 @@
 # redux-online-store-enhancer
-Automatically detect if you are online or online.
+Automatically detect if you are online or online, in a browser or on a native device.
 
 ### Install
 
 ```js
-npm i -S redux-online-store-enhancer
+yarn add redux-online-store-enhancer
 ```
 
-### Example
+### Browser Example
 
 ```js
-import onlineStoreEnhancer from 'redux-online-store-enhancer';
+import onlineStoreEnhancer, { onlineReducer } from 'redux-online-store-enhancer';
+
+const reducer = {
+  online: onlineReducer,
+};
 
 const middleware = [];
-const store = createStore(reducer, compose(applyMiddleware(...middleware), onlineStoreEnhancer));
+const store = createStore(
+  reducer,
+  compose(
+    applyMiddleware(...middleware),
+    onlineStoreEnhancer()
+  )
+);
+
+// get from state directly
+const { online } = store.getState();
+
+// reselect
+const selectOffline = (state) => state.online;
+```
+
+### React Native Example
+
+```js
+import { NetInfo } from 'react-native';
+import onlineStoreEnhancer, { onlineReducer } from 'redux-online-store-enhancer';
+
+const reducer = {
+  online: onlineReducer,
+};
+
+const middleware = [];
+const store = createStore(
+  reducer,
+  compose(
+    applyMiddleware(...middleware),
+    onlineStoreEnhancer(NetInfo)
+  )
+);
 
 // get from state directly
 const { online } = store.getState();
