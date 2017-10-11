@@ -1,6 +1,6 @@
 {
   "name": "redux-online-store-enhancer",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Automatically detect if you are online or online.",
   "main": "./lib/onlineStoreEnhancer.js",
   "scripts": {
@@ -11,7 +11,13 @@
     "type": "git",
     "url": "git+https://github.com/jurassix/redux-online-store-enhancer.git"
   },
-  "keywords": ["online", "offline", "redux", "store", "enhancer"],
+  "keywords": [
+    "online",
+    "offline",
+    "redux",
+    "store",
+    "enhancer"
+  ],
   "author": "jurassix (clinton.ayres@gmail.com)",
   "license": "MIT",
   "bugs": {
