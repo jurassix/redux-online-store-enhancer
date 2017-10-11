@@ -78,7 +78,7 @@ export default function onlineStoreEnhancer(
     } else if (isNative && NetInfo) {
       const listener = updateNativeOnlineStatus(dispatch, getState);
       NetInfo.isConnected.fetch().then(listener);
-      NetInfo.isConnected.addEventListener('change', listener);
+      NetInfo.isConnected.addEventListener('connectionChange', listener);
     }
     return store;
   };
